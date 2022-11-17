@@ -3,10 +3,7 @@ import { build } from "nuxt";
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  target: 'static',
-  router: {
-    base: '/Wallet/',
-  },
+  
  
   // ... other options
   modules: [
@@ -14,7 +11,7 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@nuxtjs/tailwindcss',       
   ],
-  
+
 
 },
 
