@@ -1,6 +1,6 @@
 # Wallet
 
-- Here is [DEMO LINK](https://637664bdc196ad34989e0469--mellifluous-dasik-96542d.netlify.app/)
+- Here is [DEMO LINK](https://63778294eaedcf0c5a76e5b3--mellifluous-dasik-96542d.netlify.app/)
 
 - Here is [Figma desing](https://www.figma.com/file/bjVEJ53RcPVgIaKyWb4UvT/Test-Wallet?node-id=0%3A1/)
 
