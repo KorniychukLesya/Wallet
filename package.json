@@ -1,12 +1,11 @@
 {
   "private": true,
   "scripts": {
-      "build": "nuxt build",
-      "dev": "nuxt dev",
-      "generate": "nuxt generate",
-      "preview": "nuxt preview",
-      "postinstall": "nuxt prepare"
-    
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
   },
   "devDependencies": {
     "@nuxt/postcss8": "^1.1.3",

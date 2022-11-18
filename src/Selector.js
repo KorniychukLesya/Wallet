@@ -8,17 +8,16 @@ export const useSelectStore = defineStore("select", {
     valuta: ["USDT", "EUR", "RSD", "UAH", "ETH", "USD", "BNB", "LTC", "BTC"],
     checedFilter: false,
     visibleSettings: false,
-
    }
   
   }),
-  getters: {
-  selectcurent(state) {
-  return state;
+    getters: {
+    selectcurent(state) {
+    return state;
   }
   },
-  actions: {
-  addselect(select) {
+    actions: {
+    addselect(select) {
     return select;
   }
   }

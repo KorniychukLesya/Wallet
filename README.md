@@ -1,6 +1,8 @@
-# Nuxt 3 Minimal Starter
+# Wallet
 
-Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
+- Here is [DEMO LINK](https://637664bdc196ad34989e0469--mellifluous-dasik-96542d.netlify.app/)
+
+- Here is [Figma desing](https://www.figma.com/file/bjVEJ53RcPVgIaKyWb4UvT/Test-Wallet?node-id=0%3A1/)
 
 ## Setup
 
@@ -39,8 +41,5 @@ Locally preview production build:
 npm run preview
 ```
 
-- Here is [DEMO LINK]( )
 # Wallet
-# Wallet
-# MyWallet
-# Wallet
+

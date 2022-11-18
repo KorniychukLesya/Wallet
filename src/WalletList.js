@@ -1,5 +1,5 @@
 import { defineStore } from "pinia";
-// import {Decimal} from 'decimal.js';
+import { Decimal } from "decimal.js";
 
 const dataWallet = {
     "USDT": {
@@ -319,41 +319,56 @@ export const useWalletList = defineStore("product", {
     },
   actions: {
     allWalletList() {
-    
       let newObject2 = {};
       for (let key in dataWallet) {
-      let newGbject = {}; 
-      const curent = dataWallet[key];
-       
-      for (let keyIn in curent) {
-        if (keyIn !== ("currency") ) {
-            // x = new Decimal(curent[keyIn][0])
-            // curent[keyIn][0] = x.
+        let newGbject = {}; 
+        const curent = dataWallet[key];
+        for (let keyIn in curent) {
+          if (keyIn !== ("currency") ) {
             newGbject[keyIn] = Object.assign({}, curent[keyIn]); 
           }  
         } 
         newObject2[key] = Object.assign({}, newGbject);
       }
-     
        return newObject2;
     },
 
     fiatWalletList() {
         let newObject2 = {};
         for (let key in dataWallet) {
-        let newGbject = {}; 
-        const curent = dataWallet[key];
-         
-        for (let keyIn in curent) {
-          if (keyIn == "EUR" || keyIn == "USD" || keyIn == "UAH"|| keyIn == "RSD" || keyIn == "RUB" )  {
-                            
-             newGbject[keyIn] = Object.assign({}, curent[keyIn]); 
+          let newGbject = {}; 
+          const curent = dataWallet[key];
+            
+          for (let keyIn in curent) {
+            if (keyIn == "EUR" || keyIn == "USD" || keyIn == "UAH"|| keyIn == "RSD" || keyIn == "RUB" )  {
+              newGbject[keyIn] = Object.assign({}, curent[keyIn]); 
             }  
           } 
           newObject2[key] = Object.assign({}, newGbject);
         }
-       
          return newObject2;
-      }
+      },
+    
+      round(item, index) {
+        if(index === "EUR" || index == "USD" || index == "UAH"|| index == "RSD" || index == "RUB") {
+           return new Decimal(item).toDecimalPlaces(2).toNumber();
+        } 
+           return new Decimal(item).toDecimalPlaces(6).toNumber();
+        },
+
+      totalBalans(select) {
+        let total = 0;
+        for (let key in dataWallet) {
+            const curent = dataWallet[key];
+            for (let keyIn in curent) {               
+              if (keyIn === select)  {
+                total += Number(curent[keyIn].total);
+              }  
+            } 
+            
+          }
+
+       return new Decimal(total).toDecimalPlaces(2).toNumber();
+    }
   }
 });
