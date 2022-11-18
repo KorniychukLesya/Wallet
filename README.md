@@ -5,7 +5,7 @@
 * The wallet block is made on the main page, the layout is made on tailwind
 * Currency balance values are rounded using decimal.js
 
-This is my first acquaintance with these technologies. It was an interesting and very useful study.
+This is my first acquaintance with these technologies. It was an interesting and very useful experience.
 
 - Here is [DEMO LINK](https://63778294eaedcf0c5a76e5b3--mellifluous-dasik-96542d.netlify.app/)
 
